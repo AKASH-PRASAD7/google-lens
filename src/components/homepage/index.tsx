@@ -1,3 +1,4 @@
+import { Camera, Mic, Search } from "lucide-react";
 import "../../App.css";
 const HomePage = () => {
   return (
@@ -43,33 +44,54 @@ const HomePage = () => {
         />
         <div className="search-bar">
           <div className="search-container">
-            <span className="material-symbols-outlined">search</span>
+            <Search />
             <input
               className="search"
               type="text"
               placeholder="Search Google or type a URL"
             />
-            <span className="material-symbols-outlined">mic</span>
+            <Mic />
+            <Camera />
           </div>
-          {/* <div className="buttons">
-            <button>Google Search</button>
-            <button>I'm Feeling Lucky</button>
-          </div> */}
+          <div className="search-btm-btn">
+            <button className="btm-btn">Google Search</button>
+            <button className="btm-btn">I'm Feeling Lucky</button>
+          </div>
         </div>
+        <section className="info-container">
+          <div className="info">
+            <p className="">🏏 Today's Googly:</p>
+            <p className="link">How many creases are there in cricket?</p>
+          </div>
+          <div className="info">
+            <p className="">Google offered in:</p>
+            <p className="link">हिन्दी</p>
+            <p className="link">বাংলা</p>
+            <p className="link">తెలుగు</p>
+            <p className="link">मराठी</p>
+            <p className="link">தமிழ்</p>
+            <p className="link">ગુજરાતી</p>
+            <p className="link">ಕನ್ನಡ</p>
+            <p className="link">മലയാളം</p>
+            <p className="link">ਪੰਜਾਬੀ</p>
+          </div>
+        </section>
       </div>
-      {/* <footer className="footer centered">
-        <div>India</div>
-        <div>
-          <a href="#">Advertising</a>
-          <a href="#">Business</a>
-          <a href="#">How Search works</a>
-        </div>
-        <div>
-          <a href="#">Privacy</a>
-          <a href="#">Terms</a>
-          <a href="#">Settings</a>
-        </div>
-      </footer> */}
+      <footer className="footer centered">
+        <div className="country">India</div>
+        <section className="btm-links-container">
+          <div className="btm-links">
+            <a href="#">Advertising</a>
+            <a href="#">Business</a>
+            <a href="#">How Search works</a>
+          </div>
+          <div className="btm-links">
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+            <a href="#">Settings</a>
+          </div>
+        </section>
+      </footer>
     </div>
   );
 };

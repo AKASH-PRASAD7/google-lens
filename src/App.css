@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
+  padding: 20px;
 }
 
 .header-left {
@@ -29,11 +29,14 @@
 .sign-in {
   background-color: #007bff;
   color: #fff;
-  padding: 5px 10px;
-  border-radius: 5px;
+  padding: 10px 20px;
+  border-radius: 25px;
   text-decoration: none;
   border: none;
   cursor: pointer;
+}
+.sign-in:hover {
+  background-color: #1c79dc;
 }
 
 .home {
@@ -42,7 +45,7 @@
 
 .main {
   position: absolute;
-  top: 35%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
@@ -55,13 +58,108 @@
 .logo {
   width: 40%;
   height: auto;
+  margin-bottom: 20px;
+}
+
+.search-bar {
+  width: 80%;
 }
 
 .search-container {
   display: flex;
   align-items: center;
+  gap: 10px;
   width: 100%;
-  background-color: blueviolet;
+  background-color: rgb(61, 55, 65);
+  padding: 12px;
+  border-radius: 40px;
+}
+
+.search-container:hover {
+  background-color: rgb(75, 68, 80);
+}
+
+.search-container:hover .search {
+  background-color: rgb(75, 68, 80);
+}
+
+.search {
+  border: none;
+  outline: none;
+  background-color: rgb(61, 55, 65);
+  width: 100%;
+}
+
+.search-btm-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  gap: 15px;
+}
+
+.btm-btn {
   padding: 10px;
   border-radius: 5px;
+  background-color: rgb(61, 55, 65);
+  border: none;
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+
+.info-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.info {
+  display: flex;
+  gap: 10px;
+  font-size: small;
+}
+
+.link {
+  color: #3c8de4;
+  cursor: pointer;
+}
+.link:hover {
+  text-decoration: underline;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(27, 27, 27);
+}
+
+.btm-links-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px;
+}
+
+.btm-links {
+  display: flex;
+  gap: 20px;
+}
+.btm-links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.btm-links a:hover {
+  text-decoration: underline;
+}
+.country {
+  padding-left: 20px;
+  padding-top: 10px;
+}
+.country:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }
