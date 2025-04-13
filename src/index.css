@@ -18,3 +18,21 @@
   padding: 0;
   margin: 0;
 }
+
+@media screen and (min-width: 768px) {
+  .web-view {
+    display: block;
+  }
+  .mobile-view {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 768px) {
+  .web-view {
+    display: none;
+  }
+  .mobile-view {
+    display: block;
+  }
+}

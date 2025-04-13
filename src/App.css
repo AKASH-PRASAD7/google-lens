@@ -14,12 +14,17 @@
 .header-right {
   display: flex;
   align-items: center;
-  gap: 10px;
+  /* justify-content: center; */
+  gap: 15px;
 }
 
 .header-links {
   color: #fff;
   text-decoration: none;
+}
+
+.icons {
+  cursor: pointer;
 }
 
 .header-links:hover {
@@ -36,7 +41,7 @@
   cursor: pointer;
 }
 .sign-in:hover {
-  background-color: #1c79dc;
+  background-color: #1863b4;
 }
 
 .home {
@@ -54,15 +59,24 @@
   padding: 20px;
   width: 50%;
 }
+.main-mobile {
+  position: absolute;
+  top: 20%;
+  width: 90%;
+}
 
 .logo {
   width: 40%;
   height: auto;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .search-bar {
   width: 80%;
+}
+
+.search-bar-mobile {
+  width: 95%;
 }
 
 .search-container {
@@ -71,7 +85,14 @@
   gap: 10px;
   width: 100%;
   background-color: rgb(61, 55, 65);
-  padding: 12px;
+  padding: 2%;
+  border-radius: 40px;
+}
+.search-container-mobile {
+  gap: 10px;
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
   border-radius: 40px;
 }
 
@@ -90,12 +111,55 @@
   width: 100%;
 }
 
+.search-mobile {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
 .search-btm-btn {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 20px;
   gap: 15px;
+}
+
+.search-btm-mobile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* flex: 1; */
+  /* gap: 5px; */
+  width: 100%;
+  margin-top: 15px;
+}
+
+.search-btm-icon {
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 25px;
+  margin: 10px;
+}
+
+.image-icon {
+  background-color: rgba(255, 255, 0, 0.108);
+  color: yellow;
+}
+
+.lang-icon {
+  background-color: #1863b419;
+  color: #007bff;
+}
+
+.grad-icon {
+  background-color: rgba(0, 128, 0, 0.126);
+  color: lime;
+}
+
+.music-icon {
+  background-color: rgba(255, 0, 230, 0.159);
+  color: palevioletred;
 }
 
 .btm-btn {
@@ -162,4 +226,22 @@
 .country:hover {
   text-decoration: underline;
   cursor: pointer;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1155px) {
+  .info {
+    font-size: x-small;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 906px) {
+  .main {
+    width: 70%;
+    top: 30%;
+  }
+  .logo {
+    width: 45%;
+  }
+  .search-bar {
+    width: 90%;
+  }
 }
