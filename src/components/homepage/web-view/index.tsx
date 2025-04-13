@@ -1,6 +1,14 @@
-import { Camera, FlaskConical, Grid3x3, Mic, Search } from "lucide-react";
+import {
+  Camera,
+  FlaskConical,
+  Grid3x3,
+  History,
+  Mic,
+  Search,
+} from "lucide-react";
 import "../../../App.css";
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
+import { historyItems } from "../../../constants";
 
 interface WebViewProps {
   search: string;
@@ -8,6 +16,30 @@ interface WebViewProps {
 }
 
 const WebView = ({ search, setSearch }: WebViewProps) => {
+  const [showHisory, setShowHistory] = useState(false);
+
+  const searchContainerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!showHisory) return;
+
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        searchContainerRef.current &&
+        !searchContainerRef.current.contains(event.target as Node)
+      ) {
+        // Clicked outside!
+        setShowHistory(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [showHisory]);
+
   return (
     <div className="homepage">
       <header className="header">
@@ -43,8 +75,10 @@ const WebView = ({ search, setSearch }: WebViewProps) => {
           alt="Google Logo"
           className="logo"
         />
-        <div className="search-bar">
-          <div className="search-container">
+        <div className="search-bar" ref={searchContainerRef}>
+          <div
+            className={`${showHisory ? "border-radius" : "search-container"}`}
+          >
             <Search />
             <input
               className="search"
@@ -52,9 +86,25 @@ const WebView = ({ search, setSearch }: WebViewProps) => {
               placeholder="Search Google or type a URL"
               value={search}
               onChange={(e) => setSearch(e.target.value)}
+              onClick={() => setShowHistory(true)}
+              onFocus={() => setShowHistory(true)}
             />
             <Mic />
             <Camera />
+            <ul className="history-container">
+              {showHisory &&
+                historyItems.map(
+                  (item, index) =>
+                    index < 6 && (
+                      <li key={index} className="history-item">
+                        <div className="history-icon-wrapper">
+                          <History size={20} className="history-icon" />
+                        </div>
+                        <span className="history-text">{item}</span>
+                      </li>
+                    )
+                )}
+            </ul>
           </div>
           <div className="search-btm-btn">
             <button className="btm-btn">Google Search</button>
