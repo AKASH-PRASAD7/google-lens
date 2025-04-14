@@ -1,5 +1,4 @@
 import { Globe, MoreVertical } from "lucide-react";
-import React from "react";
 
 const WidgetCard = ({
   imageUrl = "https://via.placeholder.com/400x225/666/ccc?text=Image+Placeholder", // Default placeholder

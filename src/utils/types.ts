@@ -21,3 +21,16 @@ export interface SearchState {
   status: "idle" | "loading" | "succeeded" | "failed";
   error: string | null;
 }
+export interface MobileViewProps {
+  search: string;
+  setSearch: React.Dispatch<React.SetStateAction<string>>;
+}
+export interface AudioSearchProps {
+  setShowAudioSearch: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+export interface BottomNavProps {
+  activeItem: string;
+  setActiveItem: React.Dispatch<React.SetStateAction<string>>;
+  setShowSearchFeed: React.Dispatch<React.SetStateAction<boolean>>;
+}

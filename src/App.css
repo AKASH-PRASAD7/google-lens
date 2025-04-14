@@ -468,7 +468,7 @@
   background-color: #202124;
   padding: 6px 0 8px 0;
   box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.1);
-  z-index: 1000;
+  z-index: 50;
 }
 
 .nav-item {
@@ -905,6 +905,7 @@
   font-family: "Roboto", "Segoe UI", sans-serif;
   box-sizing: border-box;
   width: 100%; /* Ensure full width */
+  z-index: 100;
 }
 
 /* Inherit box-sizing */
@@ -1023,4 +1024,8 @@
 }
 .search-song-button:focus-visible {
   box-shadow: 0 0 0 2px #8ab4f8; /* Google blue focus ring */
+}
+
+.header-mobile {
+  padding-top: 40px;
 }
