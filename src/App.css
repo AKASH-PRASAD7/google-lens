@@ -255,9 +255,12 @@
   cursor: pointer;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1155px) {
+@media screen and (min-width: 768px) and (max-width: 1655px) {
   .info {
     font-size: x-small;
+  }
+  .history-container {
+    top: 35px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 906px) {
